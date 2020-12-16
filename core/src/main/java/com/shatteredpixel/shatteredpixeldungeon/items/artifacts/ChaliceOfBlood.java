@@ -43,7 +43,7 @@ public class ChaliceOfBlood extends Artifact {
 	{
 		image = ItemSpriteSheet.ARTIFACT_CHALICE1;
 
-		levelCap = 10;
+		levelCap = 100;
 	}
 
 	public static final String AC_PRICK = "PRICK";
@@ -62,9 +62,9 @@ public class ChaliceOfBlood extends Artifact {
 
 		if (action.equals(AC_PRICK)){
 
-			int damage = 3*(level()*level());
+			int damage = 3*level();
 
-			if (damage > hero.HP*0.75) {
+			if (damage > hero.HP) {
 
 				GameScene.show(
 					new WndOptions(Messages.titleCase(Messages.get(this, "name")),
